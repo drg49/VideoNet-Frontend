@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #181818;
+  color: whitesmoke;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 18px;
+  background-color: #202020;
+  
+  h1 {
+    color: red;
+    margin: 0;
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+}
+
+#search {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 1px 0px 1px 1px;
+  background-color: #313131;
+
+  input {
+    width: 340px;
+    font-size: 16px;
+    padding: 3px;
+    border: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    outline: none;
+    background: #121212;
+    color: whitesmoke;
+  }
+
+  button {
+    font-size: 16px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+}
+
+#nav-profile {
+  display: flex;
+  align-items: center;
+}
+
+#upload, #profile {
+  cursor: pointer;
+  padding: 3px;
+  font-size: 23px;
+}
+
+#upload {
+  margin-right: 23px;
+}
+
