@@ -7,22 +7,39 @@
 body {
   background-color: #181818;
   color: whitesmoke;
+  font-family: 'Helvetica', 'Arial', sans-serif
 }
 
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+input[type=submit] {
+  -webkit-appearance: none;
+}
+
+#load-gif {
+  margin-top: 20px;
+  border: none;
+  object-fit: contain;
+  width: 50px;
+}
+
+///// NavBar /////
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 18px;
   background-color: #202020;
-  
-  h1 {
-    color: red;
-    margin: 0;
-    font-size: 30px;
-    font-family: 'Orbitron', sans-serif;
-  }
+}
 
+#logo {
+  color: red;
+  margin: 0;
+  font-size: 30px;
+  font-family: 'Orbitron', sans-serif;
 }
 
 #search {
@@ -48,6 +65,14 @@ nav {
     cursor: pointer;
     background: none;
     border: none;
+    padding: 0px 13px;
+    transition: 200ms;
+    color: rgb(114, 114, 114);
+    
+  }
+
+  button:hover {
+    color: darkgray;
   }
 }
 
@@ -65,4 +90,140 @@ nav {
 #upload {
   margin-right: 23px;
 }
+////////////////////
 
+// Login - Signup // Auth Page
+#auth  {
+  margin-top: 65px;
+
+  p {
+    max-width: 544px;
+    margin: auto;
+    margin-bottom: 34px;
+  }
+
+  button {
+    font-size: 17px;
+    display: block;
+    padding: 14px 16px;
+    margin: auto;
+    margin-top: 20px;
+    width: 366px;
+    transition: all 200ms;
+    border: none;
+    border-radius: 6px;
+  }
+}
+
+#account-form {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+form { 
+  input {
+    display: block;
+    width: 330px;
+    font-size: 17px;
+    margin-top: 20px;
+    padding: 14px 16px;
+  }
+
+  #login, #signup {
+    margin: auto;
+    margin-top: 20px;
+    width: 367px;
+    border: none;
+    border-radius: 6px;
+    transition: all 200ms;
+    outline: none;
+  }
+}
+
+#form-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+#margin-space {
+  margin-left: 5px;
+}
+
+#error-text {
+  color: red;
+  font-weight: 500;
+  margin: auto;
+  word-wrap: break-word;
+  width: 357px;
+}
+
+#title {
+  margin: auto;
+  font-size: 17px;
+  padding: 2px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+/////////////////////
+
+//////File Input Styling/////
+.file {
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file > input[type='file'] {
+  display: none
+}
+
+.file > label {
+  font-size: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+  outline: 0;
+  user-select: none;
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 1px;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 29%);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file > label:hover {
+  border-color: hsl(0, 0%, 21%);
+}
+
+.file > label:active {
+  background-color: hsl(0, 0%, 96%);
+}
+
+.file > label > i {
+  padding-right: 5px;
+}
+
+.file--upload > label {
+  color: hsl(204, 86%, 53%);
+  border-color: hsl(204, 86%, 53%);
+}
+
+.file--upload > label:hover {
+  border-color: hsl(204, 86%, 53%);
+  background-color: hsl(204, 86%, 96%);
+}
+
+.file--upload > label:active {
+  background-color: hsl(204, 86%, 91%);
+}
+//////////////////////////

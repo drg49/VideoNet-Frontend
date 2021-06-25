@@ -6,7 +6,7 @@ const icon = <FontAwesomeIcon icon={faBolt} />
 const Logo = () => {
     return (
         <div>
-            <h1>VideoNet {icon}</h1>
+            <h1 id="logo">VideoNet {icon}</h1>
         </div>
     )
 }
