@@ -227,3 +227,37 @@ form {
   background-color: hsl(204, 86%, 91%);
 }
 //////////////////////////
+
+///Thumbnails///
+.react-thumbnail-generator {
+  width: fit-content;
+
+  img {
+    width: 300px;
+  }
+
+
+}
+
+.snapshot-generator {
+  display: none;
+}
+
+#video-dash {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px auto;
+}
+
+#vid-card {
+  text-align: left;
+  border: 1px solid gray;
+  min-width: 300px;
+  cursor: pointer;
+  margin: 13px;
+
+  p {
+    padding: 0px 5px;
+  }
+}

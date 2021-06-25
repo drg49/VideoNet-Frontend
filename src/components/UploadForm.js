@@ -15,7 +15,6 @@ const UploadForm = () => {
     const [tempVid, setTempVid] = useState(null)
     let history = useHistory() 
 
-
     const [input, setInput] = useState(
         <div className='file file--upload'>
         <label htmlFor='input-file'>
@@ -23,19 +22,19 @@ const UploadForm = () => {
         </label>
         <input id='input-file' type='file' onChange={(e) => {uploadVideo(e)}}/>
         </div>
-        )
+    )
 
-      const uploadVideo = async (e) => {
-        const file = e.target.files[0];
-        setName(file.name)
-        setFile(file)
-        setTempVid(<video width="320" height="240" controls>
-            <source src={window.URL.createObjectURL(file)} type="video/mp4" />
-        </video>) //Shows a preview of the video temporarily before deploying
-        setTitle(<input type="title" id="title" placeholder="Title of your video" maxLength="70" required/>)
-        setUpload(<button type="submit" id="upload-btn">Post</button>)
-        setInput(null)
-      }
+    const uploadVideo = (e) => {
+    const file = e.target.files[0];
+    setName(file.name)
+    setFile(file)
+    setTempVid(<video width="320" height="240" controls>
+        <source src={window.URL.createObjectURL(file)} type="video/mp4" />
+    </video>) //Shows a preview of the video temporarily before deploying
+    setTitle(<input type="title" id="title" placeholder="Title of your video" maxLength="70" required/>)
+    setUpload(<button type="submit" id="upload-btn">Post</button>)
+    setInput(null)
+    }
 
     const handleCreate = (e) => {
         e.preventDefault()
@@ -62,7 +61,6 @@ const UploadForm = () => {
         })
         .then(() => history.push("/"))
     }
-
 
     return (
         <form onSubmit={handleCreate}>
