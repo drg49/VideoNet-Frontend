@@ -1,8 +1,8 @@
 import {useEffect, useState, createContext} from 'react';
 import {Switch, Route} from 'react-router-dom'
-
 import Home from './pages/Home'
 import Upload from './pages/Upload';
+import ViewVideo from './pages/ViewVideo';
 import Auth from './pages/Auth'; //This page gives you the choice to login or signup
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -36,7 +36,7 @@ function App() {
           <Route exact path="/" render={(rp) => <Home />}/>
           <Route path="/upload" render={(rp => gState.token ? <Upload /> : <Auth setPathState={setPathState} path={"/upload"} />)}/>
           <Route path="/myprofile" render={(rp => gState.token ? <MyProfile /> : <Auth setPathState={setPathState} path={"/"}/>)}/>
-
+          <Route path="/view/:id" render={(rp) => <ViewVideo {...rp}/>}/>
           <Route path="/auth" render={(rp) => <Auth />}/> 
           <Route path="/login" render={(rp) => <Login {...rp} path={pathState} />}/>
           <Route path="/signup" render={(rp) => <Signup {...rp} path={pathState} />}/>

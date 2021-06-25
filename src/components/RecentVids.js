@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from "react"
 import { GlobalCtx } from '../App'
+import { Link } from "react-router-dom";
 import VideoThumbnail from 'react-video-thumbnail'; 
 
 
@@ -17,12 +18,14 @@ const RecentVids = () => {
         .then(data => {
             setThumbnails(data.map((item, index) => {
                 return (
-                    <div id="vid-card" key={index}>
+                    <Link to={`/view/${item._id}`} key={index} >
+                    <div id="vid-card">
                     <VideoThumbnail id="video"
                         videoUrl={`https://drg-s3-3.s3.amazonaws.com/${item.video}`}
                     />
                     <p>{item.title}</p>
                     </div>
+                    </Link>
                 )
             }))    
         }) 
