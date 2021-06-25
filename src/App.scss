@@ -269,7 +269,20 @@ form {
   
   h2 {
     text-align: left;
+    margin-bottom: 11px;
   }
+
+  h3  {
+    text-align: left;
+    color: rgb(160, 160, 160);
+    font-style: italic;
+    margin: 0;
+  }
+
+  h2, h3 {
+    padding-left: 15px;
+  }
+
 }
 
 #single-vid {
