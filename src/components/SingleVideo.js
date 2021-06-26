@@ -6,7 +6,7 @@ const SingleVideo = (props) => {
 
     const comments = props.comments.map((item, index) => {
         return (
-            <Comment username={item.username} body={item.body}/>
+            <Comment username={item.username} body={item.body} id={props.id} commentid={item._id} />
         )
     })
 

@@ -1,6 +1,5 @@
-import { useState, useContext, useEffect } from "react"
+import { useState, useContext } from "react"
 import { GlobalCtx } from '../App'
-import { Link } from "react-router-dom";
 import loading from './Loading.gif'
 
 const AddComment = (props) => {
@@ -10,21 +9,30 @@ const AddComment = (props) => {
 
     const startComment = () => {
         setAddBtn(null)
+        setCancel(<button onClick={cancelComment} id="cancel-btn">Cancel</button>)
         setTextbox(<><textarea maxLength="200" id="body" required></textarea><br /></>)
         setSubmitBtn(<button type="submit">Comment</button>)
     }
     
+    const cancelComment = () => {
+        setAddBtn(<button onClick={startComment}>Comment</button>)
+        setTextbox(null)
+        setCancel(null)
+        setSubmitBtn(null)
+    }
+
+    const [cancel, setCancel] = useState(null)
     const [addBtn, setAddBtn] = useState(<button onClick={startComment}>Comment</button>)
     const [textbox, setTextbox] = useState(null)
     const [submitBtn, setSubmitBtn] = useState(null)
     
     const addComment = (e) => {
         e.preventDefault()
-        setTextbox(loading)
+        setTextbox(<img src={loading} id="load-gif" alt="loading"/>)
         setSubmitBtn(null)
         const body = document.getElementById("body").value
         fetch(url + "/video/addcomment/" + props.id, {
-            method: "PUT",
+            method: "put",
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": "bearer " + token
@@ -39,6 +47,7 @@ const AddComment = (props) => {
         <form id="comment-form" onSubmit={addComment}>
             {addBtn}
             {textbox}
+            {cancel}
             {submitBtn}
         </form>
     )

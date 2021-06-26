@@ -1,7 +1,6 @@
 import { useState, useContext, useEffect } from "react"
 import { GlobalCtx } from '../App'
 import SingleVideo from "../components/SingleVideo";
-import { Link } from "react-router-dom";
 
 const ViewVideo = (props) => {
 

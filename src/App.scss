@@ -309,6 +309,12 @@ form {
     resize: none;
     outline: none;
   }
+
+  #cancel-btn {
+    background-color: gray;
+    margin-right: 7px;
+  }
+
 }
 
 #comment-box {
@@ -316,4 +322,18 @@ form {
   margin: auto;
   text-align: left;
   padding: 0px 15px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+
 }
