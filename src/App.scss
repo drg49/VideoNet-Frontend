@@ -17,6 +17,7 @@ a {
 
 input[type=submit] {
   -webkit-appearance: none;
+  cursor: pointer;
 }
 
 #load-gif {
@@ -24,6 +25,14 @@ input[type=submit] {
   border: none;
   object-fit: contain;
   width: 50px;
+}
+
+button {
+  cursor: pointer;
+}
+
+#logout {
+  cursor: pointer;
 }
 
 ///// NavBar /////
