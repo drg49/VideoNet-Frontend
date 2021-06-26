@@ -22,6 +22,8 @@ const ViewVideo = (props) => {
                     title={data[0].title}
                     video={data[0].video}
                     username={data[0].username}
+                    id={data[0]._id}
+                    comments={data[0].comment.reverse()}
                 />
             )
         }) 

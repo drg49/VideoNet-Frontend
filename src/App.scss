@@ -265,7 +265,7 @@ form {
 ///Single Video///
 #single-vid-card {
   margin: 20px auto;
-  width: fit-content;
+  max-width: 1200px;
   
   h2 {
     text-align: left;
@@ -285,7 +285,35 @@ form {
 
 }
 
-#single-vid {
-  width: "100%";
-  height: "auto";
+//Comments//
+#comment-form {
+  max-width: 1200px;
+  margin: auto;
+  text-align: right;
+  padding-right: 55px;
+
+  button {
+    padding: 10px 15px;
+    border-radius: 17px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: crimson;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    width: 270px;
+    height: 70px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    resize: none;
+    outline: none;
+  }
+}
+
+#comment-box {
+  max-width: 1170px;
+  margin: auto;
+  text-align: left;
+  padding: 0px 15px;
 }
