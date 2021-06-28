@@ -33,6 +33,7 @@ const SearchBar = () => {
             setResults(title.filter((item) => {
                 return item.title.toLowerCase().includes(search.toLowerCase())
             }).map((item, index) => {
+                console.log(item)
                 return (
                     <p>{item.title}</p>
                 )
@@ -50,6 +51,9 @@ const SearchBar = () => {
         <div id="search">
            <input type="text" placeholder="Search" onChange={handleChange}/>
            <button title="Search">{search}</button>
+           <div id="dropdown-mobile">
+            {results}
+        </div>
         </div>
         <div id="dropdown">
             {results}

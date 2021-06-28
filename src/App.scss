@@ -357,3 +357,63 @@ form {
   margin-left: 2px;
 }
 
+#dropdown-mobile {
+  display: none;
+  position: absolute;
+  text-align: left;
+  z-index: 1;
+  background: whitesmoke;
+  color: black;
+  width: 347px;
+}
+
+
+@media screen and (max-width: 734px) {
+  nav {
+    display: block;
+  }
+
+  #search {
+    width: fit-content;
+    margin: 10px auto;
+  }
+
+  #nav-profile {
+    width: fit-content;
+    margin: auto;
+  }
+
+  #dropdown {
+    display: none;
+  }
+
+  #dropdown-mobile {
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 427px) {
+  #search{
+    input{
+      width: 283px;
+    }
+  }
+
+  #dropdown-mobile {
+    width: 289px;
+  }
+
+}
+
+@media screen and (max-width: 370px) {
+  #search{
+    input{
+      width: 232px;
+    }
+  }
+
+  #dropdown-mobile {
+    width: 238px;
+  }
+}
