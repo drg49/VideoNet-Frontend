@@ -346,3 +346,14 @@ form {
   }
 
 }
+
+#dropdown {
+  position: absolute;
+  text-align: left;
+  z-index: 1;
+  background: whitesmoke;
+  color: black;
+  width: 345px;
+  margin-left: 2px;
+}
+
