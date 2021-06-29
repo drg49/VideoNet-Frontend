@@ -24,6 +24,7 @@ const RecentVids = () => {
                         videoUrl={`https://drg-s3-3.s3.amazonaws.com/${item.video}`}
                     />
                     <p>{item.title}</p>
+                    <p>{item.username}</p>
                     </div>
                     </Link>
                 )
